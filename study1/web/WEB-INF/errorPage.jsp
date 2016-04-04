@@ -16,7 +16,8 @@ import="java.io.PrintWriter"%>
 <h1>Error</h1>
 There was an error somewhere.
 <p>Here is the stack trace</p>
-<p><% exception.printStackTrace(new PrintWriter(out));%></p>
+<%request.setAttribute("ex",exception);%>
+<jsp:include page="formatStackTrace.jsp"/>
 <%@include file="footer.jsp"%>
 </body>
 </html>

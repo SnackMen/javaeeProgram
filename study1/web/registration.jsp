@@ -36,6 +36,9 @@ You selected these topics:
 <%
     }
 %>
+    <p>This request was submitted at
+        <%=request.getParameter("submitTime")%>
+    </p>
     <p>Go to <a href="welcome.jsp">Topic List Page</a></p>
     <%@include file="WEB-INF/footer.jsp"%>
 </body>
